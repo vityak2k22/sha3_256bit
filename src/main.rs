@@ -5,12 +5,12 @@ use std::fs::File;
 use std::io::{self, BufRead, Write};
 
 fn main() {
-    let hash_task = [
+    let hash_task = [                                                                // hashes whose pre-images must be found
         hex!("a03ab19b866fc585b5cb1812a2f63ca861e7e7643ee5d43fd7106b623725fd67"),
         hex!("d182aed568b01fee105557a1d173791c798030db267cf94e17102b94dcbbda3c"),
         hex!("7b6a784b05c64d2e669e026fc61296eca2ee8acd5112eb8ae5f16023809e203b")
     ];
-    let mut input_file = File::open("rockyou.txt").unwrap();
+    let mut input_file = File::open("rockyou.txt").unwrap();                        // paste yourself wordlist
     let mut output_file = File::create("result.txt").unwrap();
     let mut find_count = 0u8;
 
